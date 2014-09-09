@@ -2,10 +2,33 @@ require 'takeaway'
 
 describe 'Takeaway'  do 
 
-	it "is initialized with a menu of 2 dishes" do
+	let(:takeaway) {Takeaway.new}
+
+	context 'Menu' do
+
+		it 'is initialized with a menu of 3 dishes' do
+			expect(takeaway.menu.count).to eq 3
+
+		end
+
+		it 'knows there is a dish called Fish' do
+			expect(takeaway.menu.has_key?('Fish')).to be true
+		end
 
 	end
 
+	context 'Order' do
+
+		it 'can add dishes and quantities to a list' do
+			takeaway.order('Chips',2)
+			expect(takeaway.list).to eq ['Chips','Chips']
+		end
+
+		
+
+
+
+	end
 
 
 end
