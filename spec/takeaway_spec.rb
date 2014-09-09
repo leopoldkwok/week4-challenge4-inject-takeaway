@@ -24,11 +24,24 @@ describe 'Takeaway'  do
 			expect(takeaway.list).to eq ['Chips','Chips']
 		end
 
-		
-
-
+		it 'can calculate the total price' do
+			takeaway.order('Fish', 2)
+			takeaway.order('Chips',3)
+			takeaway.order('Saveloy',2)
+			expect(takeaway.bill).to eq 22
+		end
 
 	end
+
+	 context 'Checkout' do
+	
+		it 'checks that the customer has paid correctly' do
+			takeaway.order('Fish', 2)
+			takeaway.order('Chips',3)
+			takeaway.order('Saveloy',2)
+			expect{takeaway.checkout(19)}.to raise_error RuntimeError, "The wrong amount was paid. Please try again."
+	 	end	
+	end	
 
 
 end

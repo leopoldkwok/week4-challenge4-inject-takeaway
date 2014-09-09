@@ -22,5 +22,14 @@ class Takeaway
 		@list ||= []
 	end
 
+	def checkout(customer_input)
+		if customer_input !=@bill
+			raise RuntimeError, "The wrong amount was paid. Please try again."
+		else
+			confirm_order
+		end
+	end		
+
+	
 end
 
