@@ -1,6 +1,10 @@
+require_relative 'send_sms.rb'
+
 class Takeaway
 
 	attr_accessor :menu , :bill
+
+	include Sms
 	
 	def initialize
 		@menu =
@@ -30,6 +34,11 @@ class Takeaway
 		end
 	end		
 
-	
+	def confirm_order
+		puts "Order Confirmation. Thanks for your order"
+		send_sms
+	end
+
+
 end
 

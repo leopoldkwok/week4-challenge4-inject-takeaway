@@ -40,7 +40,17 @@ describe 'Takeaway'  do
 			takeaway.order('Chips',3)
 			takeaway.order('Saveloy',2)
 			expect{takeaway.checkout(19)}.to raise_error RuntimeError, "The wrong amount was paid. Please try again."
-	 	end	
+	 	end
+
+	 		it 'sends a  confirmation via sms' do
+			takeaway.order('Fish', 2)
+			takeaway.order('Chips',3)
+			takeaway.order('Saveloy',2)
+			takeaway.checkout(22)
+			allow(takeaway).to receive(:send_sms)
+		end
+
+
 	end	
 
 
