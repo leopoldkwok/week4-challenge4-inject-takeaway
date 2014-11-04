@@ -14,7 +14,7 @@ If you would like a challenge, rewrite inject using two approaches: using iterat
 
 
 Task 2
-------
+-------
 
 Write a class Takeaway.
 
