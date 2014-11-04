@@ -47,12 +47,12 @@ How to use
 Clone the repository:
 
 ```shell
-git clone git@github.com:leopoldkwok/week4-challenge4.git
+git clone git@github.com:leopoldkwok/week4-challenge4-inject-takeaway.git
 ```
 
 How to run the tests:
 
 ```shell
-cd borisbikes
+cd week4-challenge4-inject-takeaway
 rspec
 ```
