@@ -12,10 +12,10 @@ describe Array do
 
 	context 'testing existing inject' do
 
-		it 'adds up all the numbers within the array' do
+		it 'subtracts all the numbers within the array' do
 			array = [1,2,3,4]
-			existing_inject = array.inject{|sum, n|sum + n}
-			expect(existing_inject).to eq 10
+			existing_inject = array.inject{|sum, n|sum - n}
+			expect(existing_inject).to eq -8
 		end
 
 		it 'adds up all the numbers within this array' do
@@ -24,10 +24,10 @@ describe Array do
 			expect(existing_inject).to eq 15
 		end
 
-		it 'add up all the numbers within this array' do
+		it 'multiplies up all the numbers within this array' do
 			array = [1,2,3,6]
-			existing_inject = array.inject{|sum, n|sum + n}
-			expect(existing_inject).to eq 12
+			existing_inject = array.inject{|sum, n|sum * n}
+			expect(existing_inject).to eq 36
 		end
 
 	end

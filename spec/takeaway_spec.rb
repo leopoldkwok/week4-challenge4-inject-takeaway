@@ -43,16 +43,23 @@ describe 'Takeaway'  do
 	 	end
 
 	 		it 'sends a  confirmation via sms' do
+	 		allow(takeaway).to receive(:send_sms)
+
 			takeaway.order('Fish', 2)
 			takeaway.order('Chips',3)
 			takeaway.order('Saveloy',2)
 			takeaway.checkout(22)
-			allow(takeaway).to receive(:send_sms)
+		end
+
+		it "knows the time of delivery is in one hour from order confirmation" do
+			expect(takeaway.time).to eq("#{(Time.now + 1*60*60).strftime('%H:%M')}")
+		
 		end
 
 
 	end	
-
+	
+	
 
 end
 
