@@ -1,3 +1,4 @@
+[![Code Climate](https://codeclimate.com/github/leopoldkwok/week4-challenge4-inject-takeaway/badges/gpa.svg)](https://codeclimate.com/github/leopoldkwok/week4-challenge4-inject-takeaway)
 Week 4 Challenge - Inject Method & Takeaway
 ===========================================
 
